@@ -8,9 +8,12 @@ public class CarScript : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-            Debug.Log("Collide of " + gameObject.name + " and " + col.name);
-            speed = col.gameObject.GetComponentInParent<CarScript>().speed;
-            Debug.Log("New speed = " + speed);
+        if (col.tag == "Car") {
+            speed = Mathf.Min(col.gameObject.GetComponentInParent<CarScript>().speed, speed);
+        };
+        if (col.tag == "Despawn") {
+            Destroy(gameObject);
+        };
     }
 
     // Update is called once per frame

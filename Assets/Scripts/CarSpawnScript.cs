@@ -10,15 +10,14 @@ public class CarSpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnTimer = Random.Range(2.0f, 5.0f);
+        respawnTimer = Random.Range(1.0f, 3.0f);
     }
 
     void SpawnCar()
     {
-        int randomCar = Random.Range(0,7);
-        Debug.Log("Spawning car: " + randomCar);
+        int randomCar = Random.Range(0,18);
         Instantiate(cars[randomCar], transform.position, transform.rotation);
-        respawnTimer = Random.Range(3.0f, 15.0f);;
+        respawnTimer = Random.Range(3.0f, 10.0f);;
     }
 
     // Update is called once per frame
