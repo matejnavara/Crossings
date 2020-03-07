@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private int[] lights = new int[3] { 0, 0, 0 };
 
     public Material[] mats;
+    public BoxCollider[] waitZones;
 
     public bool lightA() { return lights[0] == 1; }
     public bool lightB() { return lights[1] == 1; }
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
             {
                 lights[randomChoice] = 1;
                 mats[randomChoice].color = Color.green;
+                waitZones[randomChoice].isTrigger = false;
             } else {
                 toggleRandomGreen();
             }
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
             {
                 lights[randomChoice] = 0;
                 mats[randomChoice].color = Color.red;
+                waitZones[randomChoice].isTrigger = true;
             } else {
                 toggleRandomRed();
             }
