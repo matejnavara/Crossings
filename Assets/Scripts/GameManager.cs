@@ -13,14 +13,22 @@ public class GameManager : MonoBehaviour
     public bool lightB() { return lights[1] == 1; }
     public bool lightC() { return lights[2] == 1; }
 
+    void Start()
+    {
+        mats[0].color = Color.red;
+        mats[1].color = Color.red;
+        mats[2].color = Color.red;
+    }
+
     void toggleRandomGreen()
     {
-        if (!lightA || !lightB || !lightC)
+        if (!lightA() || !lightB() || !lightC())
         {
-            int randomChoice = Rand.Range(0, 2);
-            if (light[randomChoice] == 0)
+            int randomChoice = Random.Range(0, 3);
+            if (lights[randomChoice] == 0)
             {
-                light[randomChoice] = 1;
+                lights[randomChoice] = 1;
+                mats[randomChoice].color = Color.green;
             } else {
                 toggleRandomGreen();
             }
@@ -29,12 +37,13 @@ public class GameManager : MonoBehaviour
 
     void toggleRandomRed()
     {
-        if (lightA || lightB || lightC)
+        if (lightA() || lightB() || lightC())
         {
-            int randomChoice = Rand.Range(0, 2);
-            if (light[randomChoice] == 1)
+            int randomChoice = Random.Range(0, 3);
+            if (lights[randomChoice] == 1)
             {
-                light[randomChoice] = 0;
+                lights[randomChoice] = 0;
+                mats[randomChoice].color = Color.red;
             } else {
                 toggleRandomRed();
             }
