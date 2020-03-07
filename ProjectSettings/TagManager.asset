@@ -8,6 +8,7 @@ TagManager:
   - Crosser
   - Despawn
   - WaitZone
+  - GameManager
   layers:
   - Default
   - TransparentFX

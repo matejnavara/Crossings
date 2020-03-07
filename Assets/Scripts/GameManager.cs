@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,12 +9,19 @@ public class GameManager : MonoBehaviour
 
     public Material[] mats;
     public BoxCollider[] waitZones;
+
+    public Text scoreText;
+    public Text livesText;
     private int[] lights = new int[3] { 0, 0, 0 };
     private int score = 0;
+    private int lives = 5;
 
     public bool lightA() { return lights[0] == 1; }
     public bool lightB() { return lights[1] == 1; }
     public bool lightC() { return lights[2] == 1; }
+
+    public int getScore() { return score; }
+    public int getLives() { return lives; }
 
     void Start()
     {
@@ -26,6 +34,13 @@ public class GameManager : MonoBehaviour
     public void SuccessfulCrossing()
     {
         score += 1;
+        scoreText.text = score.ToString();
+    }
+
+    public void UnsuccessfulCrossing()
+    {
+        lives -= 1;
+        livesText.text += "X";
     }
 
     void toggleRandomGreen()

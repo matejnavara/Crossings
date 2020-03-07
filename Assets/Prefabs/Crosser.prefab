@@ -147,3 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWaiting: 0
+  explodeParticles: {fileID: 4175745413620532831, guid: c195696c8c50b472787120a705130114,
+    type: 3}

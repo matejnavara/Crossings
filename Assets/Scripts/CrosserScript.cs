@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrosserScript : MonoBehaviour
 {
     public bool isWaiting = false;
+    public GameObject explodeParticles;
     private GameManager gm;
 
     void Start()
@@ -23,6 +24,13 @@ public class CrosserScript : MonoBehaviour
         if (col.tag == "Finish")
         {
             gm.SuccessfulCrossing();
+            Destroy(gameObject);
+        }
+
+        if (col.tag == "Car")
+        {
+            gm.UnsuccessfulCrossing();
+            GameObject explode = Instantiate(explodeParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
