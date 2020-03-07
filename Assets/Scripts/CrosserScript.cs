@@ -5,6 +5,12 @@ using UnityEngine;
 public class CrosserScript : MonoBehaviour
 {
     public bool isWaiting = false;
+    private GameManager gm;
+
+    void Start()
+    {
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -13,6 +19,12 @@ public class CrosserScript : MonoBehaviour
         {
             isWaiting = true;
         };
+
+        if (col.tag == "Finish")
+        {
+            gm.SuccessfulCrossing();
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerExit(Collider col)
