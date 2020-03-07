@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public Text livesText;
     private int[] lights = new int[3] { 0, 0, 0 };
     private int score = 0;
-    private int lives = 5;
+    private int lives = 0;
 
     public bool lightA() { return lights[0] == 1; }
     public bool lightB() { return lights[1] == 1; }
@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void UnsuccessfulCrossing()
     {
-        lives -= 1;
-        livesText.text += "X";
+        lives += 1;
+        livesText.text = lives.ToString();
     }
 
     void toggleRandomGreen()
