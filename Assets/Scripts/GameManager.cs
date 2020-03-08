@@ -9,12 +9,15 @@ public class GameManager : MonoBehaviour
 
     public Material[] mats;
     public BoxCollider[] waitZones;
+    public BoxCollider[] returnWaitZones;
 
     public Text scoreText;
     public Text livesText;
+
     private int[] lights = new int[3] { 0, 0, 0 };
     private int score = 0;
     private int crossers = 50;
+    private bool isGameOver = false;
 
     public bool lightA() { return lights[0] == 1; }
     public bool lightB() { return lights[1] == 1; }
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
                 lights[randomChoice] = 1;
                 mats[randomChoice].color = Color.green;
                 waitZones[randomChoice].isTrigger = false;
+                returnWaitZones[randomChoice].isTrigger = false;
             } else {
                 toggleRandomGreen();
             }
@@ -69,6 +73,7 @@ public class GameManager : MonoBehaviour
                 lights[randomChoice] = 0;
                 mats[randomChoice].color = Color.red;
                 waitZones[randomChoice].isTrigger = true;
+                returnWaitZones[randomChoice].isTrigger = true;
             } else {
                 toggleRandomRed();
             }
@@ -78,14 +83,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (!isGameOver)
         {
-            toggleRandomGreen();
-        }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                toggleRandomGreen();
+            }
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            toggleRandomRed();
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                toggleRandomRed();
+            }
         }
         
     }

@@ -21,8 +21,7 @@ public class CrosserScript : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Colliding: " + col.tag);
-        if (col.tag == "WaitZone")
+        if ((!returnJourney && col.tag == "WaitZone") || (returnJourney && col.tag == "ReturnWaitZone"))
         {
             isWaiting = true;
             anim.Play("Waiting", 0, Random.Range(0f, 0.75f));
@@ -44,8 +43,7 @@ public class CrosserScript : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("Not colliding: " + col.tag);
-        if (col.tag == "WaitZone")
+        if (col.tag == "WaitZone" || col.tag == "ReturnWaitZone")
         {
             isWaiting = false;
             anim.Play("Walking", 0, Random.Range(0f, 0.75f));

@@ -6,6 +6,7 @@ public class CrosserSpawn : MonoBehaviour
 {
     public GameObject crosser;
     public int crosserPopulation;
+    public bool returnSpawner;
     private float respawnTimer;
 
     // Start is called before the first frame update
@@ -14,10 +15,16 @@ public class CrosserSpawn : MonoBehaviour
         respawnTimer = Random.Range(1.0f, 3.0f);
     }
 
+    public void ReturnedCrosser()
+    {
+        crosserPopulation += 1;
+    }
+
     void SpawnCrosser()
     {
         float randomPos = Random.Range(-7.0f, 7.0f);
-        Instantiate(crosser, new Vector3(transform.position.x, transform.position.y, transform.position.z + randomPos), transform.rotation);
+        GameObject newCrosser = Instantiate(crosser, new Vector3(transform.position.x, transform.position.y, transform.position.z + randomPos), transform.rotation);
+        if (returnSpawner) newCrosser.GetComponent<CrosserScript>().returnJourney = true;
         respawnTimer = Random.Range(0.2f, 2.0f);
         crosserPopulation -= 1;
     }
