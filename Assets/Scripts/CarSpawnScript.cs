@@ -15,7 +15,7 @@ public class CarSpawnScript : MonoBehaviour
 
     void SpawnCar()
     {
-        int randomCar = Random.Range(0,18);
+        int randomCar = Random.Range(0,20);
         Instantiate(cars[randomCar], transform.position, transform.rotation);
         respawnTimer = Random.Range(3.0f, 10.0f);;
     }

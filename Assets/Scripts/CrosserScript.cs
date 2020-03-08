@@ -21,8 +21,7 @@ public class CrosserScript : MonoBehaviour
         if (col.tag == "WaitZone")
         {
             isWaiting = true;
-            anim.Play("Waiting", 0, Random.Range(0f, 1f));
-            // anim.SetBool("isWaiting", true);
+            anim.Play("Waiting", 0, Random.Range(0f, 0.75f));
         };
 
         if (col.tag == "Finish")
@@ -45,8 +44,7 @@ public class CrosserScript : MonoBehaviour
         if (col.tag == "WaitZone")
         {
             isWaiting = false;
-            anim.Play("Walking", 0, Random.Range(0f, 1f));
-            //anim.SetBool("isWaiting", false);
+            anim.Play("Walking", 0, Random.Range(0f, 0.75f));
         };
     }
 
