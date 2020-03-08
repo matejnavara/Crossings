@@ -6,10 +6,12 @@ public class CrosserScript : MonoBehaviour
 {
     public bool isWaiting = false;
     public GameObject explodeParticles;
+    public AudioClip[] introClips;
 
     public bool returnJourney = false;
     private GameManager gm;
     private Animator anim;
+    private AudioSource audio;
     private float speed;
 
     void Start()
@@ -17,6 +19,16 @@ public class CrosserScript : MonoBehaviour
         gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         anim = GetComponentInChildren<Animator> ();
         speed = Random.Range(3.0f, 6.0f);
+        StartAudio();
+    }
+
+    void StartAudio()
+    {
+        int random = Random.Range(0, introClips.Length);
+        AudioClip clip = introClips[random];
+        audio = GetComponent<AudioSource>();
+        audio.clip = clip;
+        audio.Play();
     }
 
     void OnTriggerEnter(Collider col)
