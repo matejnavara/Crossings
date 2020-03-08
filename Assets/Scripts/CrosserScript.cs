@@ -6,13 +6,17 @@ public class CrosserScript : MonoBehaviour
 {
     public bool isWaiting = false;
     public GameObject explodeParticles;
+
+    public bool returnJourney = false;
     private GameManager gm;
     private Animator anim;
+    private float speed;
 
     void Start()
     {
         gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        anim = GetComponent<Animator> ();
+        anim = GetComponentInChildren<Animator> ();
+        speed = Random.Range(3.0f, 6.0f);
     }
 
     void OnTriggerEnter(Collider col)
@@ -50,7 +54,7 @@ public class CrosserScript : MonoBehaviour
 
     void Update()
     {
-        if (!isWaiting) transform.position += transform.right * Time.deltaTime * 5;
+        if (!isWaiting) transform.position += transform.forward * Time.deltaTime * speed;
     }
 
 }

@@ -14,14 +14,14 @@ public class GameManager : MonoBehaviour
     public Text livesText;
     private int[] lights = new int[3] { 0, 0, 0 };
     private int score = 0;
-    private int lives = 0;
+    private int crossers = 50;
 
     public bool lightA() { return lights[0] == 1; }
     public bool lightB() { return lights[1] == 1; }
     public bool lightC() { return lights[2] == 1; }
 
     public int getScore() { return score; }
-    public int getLives() { return lives; }
+    public int getLives() { return crossers; }
 
     void Start()
     {
@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void UnsuccessfulCrossing()
     {
-        lives += 1;
-        livesText.text = lives.ToString();
+        crossers -= 1;
+        livesText.text = crossers.ToString();
     }
 
     void toggleRandomGreen()
