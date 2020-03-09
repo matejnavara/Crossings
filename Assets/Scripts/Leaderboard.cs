@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
  
 public static class Leaderboard {
     public const int EntryCount = 10;

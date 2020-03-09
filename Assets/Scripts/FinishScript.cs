@@ -8,7 +8,6 @@ public class FinishScript : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Colliding: " + col.tag);
         if (col.tag == "Crosser")
         {
             crosserSpawn.ReturnedCrosser();
