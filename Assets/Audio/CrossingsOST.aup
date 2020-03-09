@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="CrossingsOST_data" version="1.3.0" audacityversion="2.3.3" sel0="11.8429931973" sel1="11.8429931973" vpos="336" h="6.6219956683" zoom="66.2942143107" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="CrossingsOST_data" version="1.3.0" audacityversion="2.3.3" sel0="24.9343025962" sel1="24.9343025962" vpos="0" h="0.0000000000" zoom="66.2942143107" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags>
 		<tag name="YEAR" value="2020-03-08 07:10:44 +0000"/>
 	</tags>
@@ -238,9 +238,25 @@
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
+		<waveclip offset="11.79773243" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="260140">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f22b.au" len="260140" min="-0.329987" max="0.402283" rms="0.059106"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="17.69659864" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="260140">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f22b.au" len="260140" min="-0.329987" max="0.402283" rms="0.059106"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
 	</wavetrack>
-	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="14.84476190" colorindex="0">
+	<wavetrack name="Crossings Audio" isSelected="1" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="23.59546485" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="90469">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1fe2e.au" len="90469" min="-0.33078" max="0.418427" rms="0.054201"/>
@@ -250,7 +266,7 @@
 		</waveclip>
 	</wavetrack>
 	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="14.84476190" colorindex="0">
+		<waveclip offset="25.64691610" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="94461">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1f1e9.au" len="94461" min="-0.385406" max="0.532684" rms="0.062029"/>
@@ -260,7 +276,7 @@
 		</waveclip>
 	</wavetrack>
 	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="17.04523810" colorindex="0">
+		<waveclip offset="27.78888889" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="91800">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1f1ae.au" len="91800" min="-0.486938" max="0.733856" rms="0.094824"/>
@@ -270,7 +286,7 @@
 		</waveclip>
 	</wavetrack>
 	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="19.12687075" colorindex="0">
+		<waveclip offset="15.74798186" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="167635">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1f8a2.au" len="167635" min="-0.422455" max="0.408325" rms="0.079967"/>
@@ -279,7 +295,7 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="Crossings Audio" isSelected="1" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="22.92811791" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="132378">
 				<waveblock start="0">
@@ -290,7 +306,7 @@
 		</waveclip>
 	</wavetrack>
 	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="26.11086168" colorindex="0">
+		<waveclip offset="8.73378685" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="309326">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1f237.au" len="182757" min="-0.356171" max="0.34729" rms="0.099197"/>
@@ -303,7 +319,7 @@
 		</waveclip>
 	</wavetrack>
 	<wavetrack name="Crossings Audio" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="11.79773243" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="385160">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1f27c.au" len="262144" min="-0.254547" max="0.235779" rms="0.034324"/>

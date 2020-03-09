@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text livesText;
     public GameObject rushObj;
+    public GameObject blackScreen;
     public int crossers = 50;
 
     private int[] lights = new int[3] { 0, 0, 0 };
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         isGameOver = true;
+        blackScreen.GetComponent<Animator>().Play("FadeOut");
         // ui.FadeOut();
     }
 
