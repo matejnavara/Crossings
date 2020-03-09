@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public Text livesText;
+    public GameObject rushObj;
+    public int crossers = 50;
 
     private int[] lights = new int[3] { 0, 0, 0 };
     private int score = 0;
-    private int crossers = 50;
+    private bool isRushHour = false;
     private bool isGameOver = false;
 
     public bool lightA() { return lights[0] == 1; }
@@ -32,7 +34,11 @@ public class GameManager : MonoBehaviour
         mats[0].color = Color.red;
         mats[1].color = Color.red;
         mats[2].color = Color.red;
+        rushObj.SetActive(false);
     }
+
+    public bool getRushHour() { return isRushHour; }
+    public bool getGameOver() { return isGameOver; }
 
     public void SuccessfulCrossing()
     {
@@ -46,7 +52,7 @@ public class GameManager : MonoBehaviour
         livesText.text = crossers.ToString();
     }
 
-    void toggleRandomGreen()
+    void ToggleRandomGreen()
     {
         if (!lightA() || !lightB() || !lightC())
         {
@@ -58,12 +64,12 @@ public class GameManager : MonoBehaviour
                 waitZones[randomChoice].isTrigger = false;
                 returnWaitZones[randomChoice].isTrigger = false;
             } else {
-                toggleRandomGreen();
+                ToggleRandomGreen();
             }
         }
     }
 
-    void toggleRandomRed()
+    void ToggleRandomRed()
     {
         if (lightA() || lightB() || lightC())
         {
@@ -75,9 +81,21 @@ public class GameManager : MonoBehaviour
                 waitZones[randomChoice].isTrigger = true;
                 returnWaitZones[randomChoice].isTrigger = true;
             } else {
-                toggleRandomRed();
+                ToggleRandomRed();
             }
         }
+    }
+
+    void RushHour()
+    {
+        isRushHour = true;
+        rushObj.SetActive(true);
+    }
+
+    void GameOver()
+    {
+        isGameOver = true;
+        // ui.FadeOut();
     }
 
     // Update is called once per frame
@@ -85,14 +103,24 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameOver)
         {
+            if (crossers < 10 && !isRushHour)
+            {
+                RushHour();
+            }
+
+            if (crossers == 0)
+            {
+                GameOver();
+            }
+
             if (Input.GetKeyDown(KeyCode.A))
             {
-                toggleRandomGreen();
+                ToggleRandomGreen();
             }
 
             if (Input.GetKeyDown(KeyCode.L))
             {
-                toggleRandomRed();
+                ToggleRandomRed();
             }
         }
         

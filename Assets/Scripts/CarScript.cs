@@ -6,6 +6,14 @@ public class CarScript : MonoBehaviour
 {
     public float speed = 10.0f;
 
+    private GameManager gm;
+    private float modifier = 1f;
+
+    void Start()
+    {
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+    }
+
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Car") {
@@ -19,6 +27,7 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * Time.deltaTime * speed;
+        if (gm.getRushHour()) modifier = 2f;
+        transform.position += transform.forward * Time.deltaTime * speed * modifier;
     }
 }
