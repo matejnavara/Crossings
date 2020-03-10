@@ -13,6 +13,7 @@ public class CrosserScript : MonoBehaviour
     private Animator anim;
     private AudioSource audio;
     private float speed;
+    private float modifier = 1f;
 
     void Start()
     {
@@ -64,7 +65,8 @@ public class CrosserScript : MonoBehaviour
 
     void Update()
     {
-        if (!isWaiting) transform.position += transform.forward * Time.deltaTime * speed;
+        if (gm.getRushHour()) modifier = 2f;
+        if (!isWaiting) transform.position += transform.forward * Time.deltaTime * speed * modifier;
     }
 
 }

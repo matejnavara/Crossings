@@ -78,17 +78,17 @@ public class GameOverScript : MonoBehaviour
                 ConfirmName();
             }
 
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
             {
                 ConfirmLetter();
             }
 
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R))
             {
                 CycleLetter();
             }
         } else {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
             {
                 PlayAgain();
             }
