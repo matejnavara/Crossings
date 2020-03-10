@@ -5,20 +5,29 @@ using UnityEngine.UI;
 
 public class GameOverScript : MonoBehaviour
 {
-    public Text finalScore;
+    public Text finalScoreText;
     public Text[] letterTexts;
 
     private GameManager gm;
     private string[] letters;
+    private string name = "";
     private int letterPos = 0;
     private int selectingLetter = 0;
-    private string name = "";
     private bool nameSet = false;
+    private bool countScore = false;
+    private int score = 0;
+    private int finalScore = 0;
 
     void Start()
     {
         gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         letters = new string[26] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+    }
+
+    public void CountToScore()
+    {
+        finalScore = gm.getScore();
+        countScore = true;
     }
 
     void CycleLetter()
@@ -45,6 +54,11 @@ public class GameOverScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (countScore && score < finalScore)
+        {
+            score += 1;
+            finalScoreText.text = score.ToString();
+        }
         if (!nameSet)
         {
             if (selectingLetter > 2)

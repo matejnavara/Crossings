@@ -5,13 +5,17 @@ using UnityEngine;
 public class CrosserSpawn : MonoBehaviour
 {
     public GameObject crosser;
-    public int crosserPopulation;
     public bool returnSpawner;
+
+    private GameManager gm;
+    private int crosserPopulation = 0;
     private float respawnTimer;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (!returnSpawner) crosserPopulation = gm.crossers;
         respawnTimer = Random.Range(1.0f, 3.0f);
     }
 
