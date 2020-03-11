@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
 
 
-    public Material[] mats;
+    public Material[] walkMats;
+    public Material[] waitMats;
     public BoxCollider[] waitZones;
     public BoxCollider[] returnWaitZones;
 
@@ -32,9 +33,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = 0;
-        mats[0].color = Color.red;
-        mats[1].color = Color.red;
-        mats[2].color = Color.red;
+        ToggleLightMat(0, false);
+        ToggleLightMat(1, false);
+        ToggleLightMat(2, false);
         rushObj.SetActive(false);
     }
 
@@ -53,6 +54,18 @@ public class GameManager : MonoBehaviour
         livesText.text = crossers.ToString();
     }
 
+    void ToggleLightMat(int set, bool walk)
+    {
+        if (walk)
+        {
+            walkMats[set].EnableKeyword("_EMISSION");
+            waitMats[set].DisableKeyword("_EMISSION");
+        } else {
+            walkMats[set].DisableKeyword("_EMISSION");
+            waitMats[set].EnableKeyword("_EMISSION");
+        }
+    }
+
     void ToggleRandomGreen()
     {
         if (!lightA() || !lightB() || !lightC())
@@ -61,7 +74,7 @@ public class GameManager : MonoBehaviour
             if (lights[randomChoice] == 0)
             {
                 lights[randomChoice] = 1;
-                mats[randomChoice].color = Color.green;
+                ToggleLightMat(randomChoice, true);
                 waitZones[randomChoice].isTrigger = false;
                 returnWaitZones[randomChoice].isTrigger = false;
             } else {
@@ -78,7 +91,7 @@ public class GameManager : MonoBehaviour
             if (lights[randomChoice] == 1)
             {
                 lights[randomChoice] = 0;
-                mats[randomChoice].color = Color.red;
+                ToggleLightMat(randomChoice, false);
                 waitZones[randomChoice].isTrigger = true;
                 returnWaitZones[randomChoice].isTrigger = true;
             } else {
