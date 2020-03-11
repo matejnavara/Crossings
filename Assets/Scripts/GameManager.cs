@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject blackScreen;
     public int crossers = 50;
 
+    private SoundManager sm;
     private int[] lights = new int[3] { 0, 0, 0 };
     private int score = 0;
     private bool isRushHour = false;
@@ -32,11 +33,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        sm = GetComponent<SoundManager>();
         score = 0;
         ToggleLightMat(0, false);
         ToggleLightMat(1, false);
         ToggleLightMat(2, false);
         rushObj.SetActive(false);
+        sm.PlayTheme();
     }
 
     public bool getRushHour() { return isRushHour; }
@@ -110,7 +113,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         blackScreen.GetComponent<Animator>().Play("FadeOut");
-        // ui.FadeOut();
+        sm.PlayGameOver();
     }
 
     // Update is called once per frame
