@@ -30,7 +30,7 @@ public class CarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gm.getRushHour()) modifier = 2f;
+        if (gm && gm.getRushHour()) modifier = 2f;
         transform.position += transform.forward * Time.deltaTime * speed * modifier;
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CarSpawn : MonoBehaviour
 {
+    public float normalSpawnThreshold = 0.95f;
+    public float rushHourSpawnThreshold = 0.8f;
     public GameObject[] normalCars;
     public GameObject[] emergencyCars;
     
@@ -18,12 +20,12 @@ public class CarSpawn : MonoBehaviour
 
     void SpawnCar()
     {
-        if (gm.getRushHour())
+        if (gm && gm.getRushHour())
         {
-            SelectSpawn(0.8f);
+            SelectSpawn(rushHourSpawnThreshold);
             respawnTimer = Random.Range(1.0f, 3.0f);
         } else {
-            SelectSpawn(0.95f);
+            SelectSpawn(normalSpawnThreshold);
             respawnTimer = Random.Range(3.0f, 10.0f);
         }
     }
@@ -55,8 +57,10 @@ public class CarSpawn : MonoBehaviour
     void Update()
     {
         respawnTimer -= Time.deltaTime;
+        bool doSpawn = true;
+        if (gm) doSpawn = !gm.getGameOver();
  
-         if (!gm.getGameOver() && respawnTimer <= 0.0f) {
+         if (doSpawn && respawnTimer <= 0.0f) {
             SpawnCar();
          }
     }
