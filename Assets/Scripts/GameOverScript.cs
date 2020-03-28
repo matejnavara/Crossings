@@ -17,6 +17,7 @@ public class GameOverScript : MonoBehaviour
     private int letterPos = 0;
     private int selectingLetter = 0;
     private bool nameSet = false;
+    private bool isHighScore = false;
     private bool countScore = false;
     private int score = 0;
     private int finalScore = 0;
@@ -31,13 +32,21 @@ public class GameOverScript : MonoBehaviour
     public void CountToScore()
     {
         finalScore = gm.getScore();
+        int lbScore = Leaderboard.GetEntry(Leaderboard.EntryCount - 1).score;
+        isHighScore = finalScore > lbScore;
         countScore = true;
+        StartCoroutine(IncrementScore());
     }
 
     public void PlayAgain()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void CycleLetter()
@@ -59,19 +68,32 @@ public class GameOverScript : MonoBehaviour
     {
         Leaderboard.Record(name, finalScore);
         nameSet = true;
+        DisplayLB();
+    }
+
+    void DisplayLB()
+    {
         anim.Play("Leaderboard");
         lb.DrawLeaderboard();
+    }
+
+    IEnumerator IncrementScore()
+    {
+        while (score < finalScore)
+        {
+            score += 1;
+            finalScoreText.text = score.ToString();
+            yield return new WaitForSeconds(0.5f);
+        }
+        new WaitForSeconds(2.5f);
+        DisplayLB();
+        yield return null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (countScore && score < finalScore)
-        {
-            score += 1;
-            finalScoreText.text = score.ToString();
-        }
-        if (!nameSet)
+        if (isHighScore && !nameSet)
         {
             if (selectingLetter > 2)
             {
@@ -87,10 +109,17 @@ public class GameOverScript : MonoBehaviour
             {
                 CycleLetter();
             }
-        } else {
+        }
+        
+        if (!isHighScore && !countScore) {
             if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
             {
                 PlayAgain();
+            }
+
+            if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R))
+            {
+                BackToMenu();
             }
         }
     }
