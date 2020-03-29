@@ -8,6 +8,7 @@ public class GameOverScript : MonoBehaviour
 {
     public Text finalScoreText;
     public Text[] letterTexts;
+    public GameObject  lettersObj;
     public LeaderboardGUI lb;
 
     private GameManager gm;
@@ -26,6 +27,7 @@ public class GameOverScript : MonoBehaviour
         gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         anim = GetComponent<Animator>();
         letters = new string[26] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+        lettersObj.SetActive(false);
     }
 
     public void CountToScore()
@@ -83,8 +85,13 @@ public class GameOverScript : MonoBehaviour
             finalScoreText.text = i.ToString();
             yield return new WaitForSeconds(0.05f);
         }
-        yield return new WaitForSeconds(1.5f);
-        if (!isHighScore) DisplayLB();
+        if (isHighScore)
+        {
+            lettersObj.SetActive(true);
+        } else {
+            yield return new WaitForSeconds(1.5f);
+            DisplayLB();
+        }
         countScore = false;
     }
 
