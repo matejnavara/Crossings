@@ -89,7 +89,7 @@ public class GameOverScript : MonoBehaviour
         {
             lettersObj.SetActive(true);
         } else {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.3f);
             DisplayLB();
         }
         countScore = false;
