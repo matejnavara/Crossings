@@ -2628,8 +2628,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Crossings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5b33fd87d9d95486b870a7d0bb07a1ee, type: 2}
-  m_sharedMaterial: {fileID: -6321577247730151950, guid: 5b33fd87d9d95486b870a7d0bb07a1ee,
+  m_fontAsset: {fileID: 11400000, guid: c54ddd272c67a4a3dacc7a2c80a66dc0, type: 2}
+  m_sharedMaterial: {fileID: -398116311845682732, guid: c54ddd272c67a4a3dacc7a2c80a66dc0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 118.4
+  m_fontSize: 183
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5199,8 +5199,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3312529, y: 0.06370904}
   m_AnchorMax: {x: 0.66800004, y: 0.21300001}
-  m_AnchoredPosition: {x: 1.2797852, y: -3.0499878}
-  m_SizeDelta: {x: -2.7200012, y: -30.199997}
+  m_AnchoredPosition: {x: 1.2797852, y: 0}
+  m_SizeDelta: {x: -2.7, y: -0.000015259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160238527
 MonoBehaviour:
@@ -5221,7 +5221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9e3c3fbec8c824a4591fc8aa2fb3bd18, type: 3}
+    m_Font: {fileID: 12800000, guid: 9da624936f55243d89c891d81e7cd4cf, type: 3}
     m_FontSize: 12
     m_FontStyle: 1
     m_BestFit: 1
@@ -10103,6 +10103,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6758976379768632663, guid: c843de371809a432b92bba285f2a0691,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9da624936f55243d89c891d81e7cd4cf,
+        type: 3}
+    - target: {fileID: 6758976379768632663, guid: c843de371809a432b92bba285f2a0691,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758976379768632663, guid: c843de371809a432b92bba285f2a0691,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c843de371809a432b92bba285f2a0691, type: 3}
 --- !u!1001 &7390181628447170924
@@ -10433,6 +10449,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RedButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220245383217528104, guid: 6a32898a465694117b3044e948196281,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9da624936f55243d89c891d81e7cd4cf,
+        type: 3}
+    - target: {fileID: 9220245383217528104, guid: 6a32898a465694117b3044e948196281,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220245383217528104, guid: 6a32898a465694117b3044e948196281,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a32898a465694117b3044e948196281, type: 3}
