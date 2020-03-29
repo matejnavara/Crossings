@@ -4866,14 +4866,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9e3c3fbec8c824a4591fc8aa2fb3bd18, type: 3}
+    m_Font: {fileID: 12800000, guid: 9da624936f55243d89c891d81e7cd4cf, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -5730,8 +5730,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5b33fd87d9d95486b870a7d0bb07a1ee, type: 2}
-  m_sharedMaterial: {fileID: -6321577247730151950, guid: 5b33fd87d9d95486b870a7d0bb07a1ee,
+  m_fontAsset: {fileID: 11400000, guid: c54ddd272c67a4a3dacc7a2c80a66dc0, type: 2}
+  m_sharedMaterial: {fileID: -398116311845682732, guid: c54ddd272c67a4a3dacc7a2c80a66dc0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5757,7 +5757,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 152.5
+  m_fontSize: 183
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8092,14 +8092,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9e3c3fbec8c824a4591fc8aa2fb3bd18, type: 3}
+    m_Font: {fileID: 12800000, guid: 9da624936f55243d89c891d81e7cd4cf, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -8909,7 +8909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1844319636
 RectTransform:
   m_ObjectHideFlags: 0

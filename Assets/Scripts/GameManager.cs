@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
     {
         isRushHour = true;
         rushObj.SetActive(true);
+        sm.RushHour();
     }
 
     void GameOver()

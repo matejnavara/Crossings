@@ -20,9 +20,17 @@ using System.Collections;
             efxSource.Play();
         }
 
+        public void RushHour()
+        {
+            efxSource.pitch = 1.5f;
+        }
+
         public void PlayGameOver()
         {
-            efxSource.clip = gameOver;
+            efxSource.Stop();
+            efxSource.pitch = 1.0f;
+            efxSource.PlayOneShot(gameOver);
+            efxSource.clip = gameOverLoop;
             efxSource.Play();
         }
 
