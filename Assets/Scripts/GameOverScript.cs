@@ -19,7 +19,6 @@ public class GameOverScript : MonoBehaviour
     private bool nameSet = false;
     private bool isHighScore = false;
     private bool countScore = false;
-    private int score = 0;
     private int finalScore = 0;
 
     void Start()
@@ -79,21 +78,20 @@ public class GameOverScript : MonoBehaviour
 
     IEnumerator IncrementScore()
     {
-        while (score < finalScore)
+        for (int i = 0; i <= finalScore; ++i)
         {
-            score += 1;
-            finalScoreText.text = score.ToString();
-            yield return new WaitForSeconds(0.5f);
+            finalScoreText.text = i.ToString();
+            yield return new WaitForSeconds(0.05f);
         }
-        new WaitForSeconds(2.5f);
-        DisplayLB();
-        yield return null;
+        yield return new WaitForSeconds(1.5f);
+        if (!isHighScore) DisplayLB();
+        countScore = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isHighScore && !nameSet)
+        if (isHighScore && !countScore && !nameSet)
         {
             if (selectingLetter > 2)
             {
