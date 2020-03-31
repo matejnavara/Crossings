@@ -50,14 +50,14 @@ public class GameOverScript : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    void CycleLetter()
+    public void CycleLetter()
     {   
         letterPos += 1;
         if (letterPos > 25) letterPos = 0;
         letterTexts[selectingLetter].text = letters[letterPos];
     }
 
-    void ConfirmLetter()
+    public void ConfirmLetter()
     {
         name += letters[letterPos];
         letterPos = 0;
