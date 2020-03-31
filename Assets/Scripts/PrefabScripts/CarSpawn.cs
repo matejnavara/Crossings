@@ -34,7 +34,6 @@ public class CarSpawn : MonoBehaviour
     {
         float emergencyChance = Random.Range(0f, 1f);
         if (emergencyChance > threshold) {
-            Debug.Log("EMERGENCY: " + emergencyChance);
             SpawnEmergencyCar();
         } else {
             SpawnNormalCar();
