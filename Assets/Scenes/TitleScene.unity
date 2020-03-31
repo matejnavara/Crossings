@@ -693,10 +693,10 @@ RectTransform:
   m_Father: {fileID: 1844319636}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.813, y: 0.06370904}
-  m_AnchorMax: {x: 0.9822453, y: 0.42000002}
-  m_AnchoredPosition: {x: -0.111328125, y: 6.999939}
-  m_SizeDelta: {x: 0.16741943, y: -10.899969}
+  m_AnchorMin: {x: 0.79141647, y: 0.0748918}
+  m_AnchorMax: {x: 1, y: 0.425}
+  m_AnchoredPosition: {x: 2, y: -3.5}
+  m_SizeDelta: {x: -42, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55845954
 MonoBehaviour:
@@ -741,8 +741,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayAgain
+      - m_Target: {fileID: 1750390379}
+        m_MethodName: GoToPirateJam
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1001,10 +1001,10 @@ RectTransform:
   m_Father: {fileID: 1844319636}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.033832937, y: 0.06370904}
-  m_AnchorMax: {x: 0.24227399, y: 0.42000002}
-  m_AnchoredPosition: {x: -6.363159, y: 6.999939}
-  m_SizeDelta: {x: -74.79364, y: -10.899971}
+  m_AnchorMin: {x: 0, y: 0.0748918}
+  m_AnchorMax: {x: 0.20969784, y: 0.425}
+  m_AnchoredPosition: {x: -3, y: -3.5}
+  m_SizeDelta: {x: -44, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110943569
 MonoBehaviour:
@@ -1049,8 +1049,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayAgain
+      - m_Target: {fileID: 1750390379}
+        m_MethodName: ToggleCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 183
+  m_fontSize: 194
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3193,10 +3193,10 @@ RectTransform:
   m_Father: {fileID: 1844319636}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.532, y: -121.8}
-  m_SizeDelta: {x: 1148.5, y: 725.4}
+  m_AnchorMin: {x: 0.20969784, y: 0.0748918}
+  m_AnchorMax: {x: 0.79141647, y: 0.6982741}
+  m_AnchoredPosition: {x: -0.99993896, y: 3.5899963}
+  m_SizeDelta: {x: 1.5, y: 11.400024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698061466
 MonoBehaviour:
@@ -3222,7 +3222,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 43
+    m_MaxSize: 200
     m_Alignment: 1
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -3230,11 +3230,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "<b>Developed during Pirate Jam 2020</b>\n\nCreated by Matej Navara (@matejnavara)\n\nMusic
-    and SFX by Jerry Belich (@j3rrytron)\n\n3D Assets by KenneyNL, Synty Studios,
-    Jacek Jankowski, \nFerocious Industries, Sics Games\n\nMassive Thank You to American
+    and SFX by Jerry Belich (@j3rrytron)\n\nAssets by KenneyNL, Synty Studios, Jacek
+    Jankowski, \nFerocious Industries, Sics Games\n\nMassive Thank You to American
     McGee (@americanmcgee)\nand all the sponsors that make Pirate Jam possible!\nUnity
     3D (@unity3d)\nKenneyNL (@kenneyNL)\nDevolver Digital (@devolverdigital)\nCode
-    of the Void (@codeofthevoid)\nTV Paint Animation (@TVPaint_Anim)\nLandfall Games
+    of the Void (@codeofthevoid)\nTVPaint Animation (@TVPaint_Anim)\nLandfall Games
     (@LandfallGames)"
 --- !u!222 &698061467
 CanvasRenderer:
@@ -4844,7 +4844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: -172.1, y: -194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076046372
@@ -5705,10 +5705,10 @@ RectTransform:
   m_Father: {fileID: 1844319636}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.24227399, y: 0.726}
-  m_AnchorMax: {x: 0.75900006, y: 0.9558191}
-  m_AnchoredPosition: {x: 30.299, y: 27}
-  m_SizeDelta: {x: -13.099976, y: -16.649994}
+  m_AnchorMin: {x: 0.20969784, y: 0.74949044}
+  m_AnchorMax: {x: 0.79141647, y: 0.9558191}
+  m_AnchoredPosition: {x: -0.00024414, y: 13.5}
+  m_SizeDelta: {x: 0, y: 10.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224111095
 MonoBehaviour:
@@ -5757,12 +5757,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 183
+  m_fontSize: 197.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 200
+  m_fontSizeMax: 546.4
   m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -8070,7 +8070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -172.1, y: -194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1705224224
@@ -9993,6 +9993,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1979130255}
     m_Modifications:
+    - target: {fileID: 6758976378684980040, guid: c843de371809a432b92bba285f2a0691,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1750390379}
+    - target: {fileID: 6758976378684980040, guid: c843de371809a432b92bba285f2a0691,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10051,42 +10061,42 @@ PrefabInstance:
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.111328125
+      value: 840
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.999939
+      value: -290
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0.16741943
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -10.899969
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.813
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.06370904
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.9822453
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.42000002
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6758976378684980041, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
@@ -10102,6 +10112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GreenButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758976379768632660, guid: c843de371809a432b92bba285f2a0691,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 6758976379768632663, guid: c843de371809a432b92bba285f2a0691,
         type: 3}
@@ -10398,42 +10413,42 @@ PrefabInstance:
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.8631592
+      value: -840
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.999939
+      value: -290
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -63.79364
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -10.899971
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.033832937
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.06370904
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.23700002
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.42000002
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9220245382550501464, guid: 6a32898a465694117b3044e948196281,
         type: 3}
@@ -10449,6 +10464,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RedButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220245382550501471, guid: 6a32898a465694117b3044e948196281,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1750390379}
+    - target: {fileID: 9220245382550501471, guid: 6a32898a465694117b3044e948196281,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleCredits
       objectReference: {fileID: 0}
     - target: {fileID: 9220245383217528104, guid: 6a32898a465694117b3044e948196281,
         type: 3}

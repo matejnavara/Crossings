@@ -20,23 +20,33 @@ public class TitleManager : MonoBehaviour
         creditsObj.SetActive(inCredits);
     }
 
+    public void GoToPirateJam()
+    {
+        Application.OpenURL("https://www.pirate-jam.com/");
+    }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (!inCredits)
         {
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
-                SceneManager.LoadScene(1);
+                Play();
             }
         } else {
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
-                Application.OpenURL("https://www.pirate-jam.com/");
+                GoToPirateJam();
             }
         }
 
-        if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             ToggleCredits();
         }

@@ -105,24 +105,24 @@ public class GameOverScript : MonoBehaviour
                 ConfirmName();
             }
 
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 ConfirmLetter();
             }
 
-            if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 CycleLetter();
             }
         }
         
         if (!isHighScore && !countScore) {
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 PlayAgain();
             }
 
-            if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 BackToMenu();
             }

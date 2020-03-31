@@ -132,12 +132,12 @@ public class GameManager : MonoBehaviour
                 GameOver();
             }
 
-            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 ToggleRandomGreen();
             }
 
-            if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 ToggleRandomRed();
             }
